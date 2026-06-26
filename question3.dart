@@ -62,19 +62,30 @@ void main() {
   //    - Displaying account information
   //    - Handling insufficient funds scenario
 
-  // TODO: Create 3 bank accounts:
-  // 1. Account: 12345, Holder: Alice, Type: Savings
-  // 2. Account: 67890, Holder: Bob, Type: Checking
-  // 3. Account: 11111, Holder: Charlie, Type: Savings
+  BankAccount account1 =
+      BankAccount("12345", "Alice", "Savings");
+
+  BankAccount account2 =
+      BankAccount("67890", "Bob", "Checking");
+
+  BankAccount account3 =
+      BankAccount("11111", "Charlie", "Savings");
 
   // TODO: Demonstrate depositing money:
-  // Account 1: 1000.0, Account 2: 500.0, Account 3: 2000.0
+  account1.deposit(1000.0);
+  account2.deposit(500.0);
+  account3.deposit(2000.0);
 
   // TODO: Demonstrate withdrawing money:
-  // Account 1: 200.0, Account 2: 100.0
+  account1.withdraw(200.0);
+  account2.withdraw(100.0);
 
   // TODO: Display account information for all accounts
 
+  account1.displayAccountInfo();
+  account2.displayAccountInfo();
+  account3.displayAccountInfo();
+
   // TODO: Demonstrate insufficient funds scenario:
-  // Withdraw 1000.0 from Account 2
+  account2.withdraw(1000.0);
 }
