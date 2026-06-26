@@ -93,19 +93,18 @@ class Developer extends Employee with Payable {
 
   @override
   String getJobTitle() {
-    // TODO: Return developer job title
-    return "";
+    return "Senior Developer";
   }
 
   @override
   double getBaseSalary() {
-    // TODO: Return developer base salary
-    return 0.0;
+    return 6000.0;
   }
 
   @override
   void displayInfo() {
-    // TODO: Override to show developer-specific info as shown in expected output
+    print(
+      "Developer: $name (ID: $id, Department: $department, Language: $programmingLanguage)");
   }
 }
 
