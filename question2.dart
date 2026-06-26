@@ -14,14 +14,20 @@ import 'dart:math';
 void main() {
   // 1. Create a List<String> of student names: ["Alice", "Bob", "Charlie", "Diana", "Eve"]
   // TODO: Create the student names list
-  List<String> studentNames = [];
+  List<String> studentNames = ["Alice", "Bob", "Charlie", "Diana", "Eve"];
 
   // 2. Create a Map<String, int> to store student scores
   // TODO: Create the scores map
   Map<String, int> studentScores = {};
 
+
   // 3. Use a for loop to assign random scores (60-100) to each student
   // TODO: Implement the for loop to assign random scores
+
+  Random random = Random();
+  for (String student in studentNames){
+    studentScores[student] = random.nextInt(41) + 60;
+  }
 
   // 4. Find and display:
   //    - The student with the highest score
