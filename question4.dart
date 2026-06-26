@@ -95,9 +95,17 @@ class Motorcycle extends Vehicle {
 
 void main() {
   // 3. Create a list of vehicles and demonstrate polymorphism by calling start(), stop(), and displayInfo() on each vehicle
-  // TODO: Create a list containing one Car and one Motorcycle
+  List<Vehicle> vehicles = [
+    Car("Toyota", "Camry", 2020, 4),
+    Motorcycle("Honda", "CBR", 2021, true),
+  ];
 
-  // TODO: Loop through the list and call displayInfo(), start(), and stop()
+  for (Vehicle vehicle in vehicles) {
+  vehicle.displayInfo();
+  vehicle.start();
+  vehicle.stop();
+  }
 
-  // TODO: Print the age of each vehicle using calculateAge()
+  print("Car age: ${vehicles[0].calculateAge()} years");
+  print("Motorcycle age: ${vehicles[1].calculateAge()} years");
 }
