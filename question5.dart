@@ -108,6 +108,9 @@ class Developer extends Employee with Payable {
   }
 }
 
+
+
+
 void main() {
   // 5. Create employees and demonstrate:
   //    - Salary calculation with bonus
@@ -115,11 +118,33 @@ void main() {
   //    - Report generation (for managers)
   //    - Display all employee information
 
-  // TODO: Create one Manager and one Developer with the details shown in expected output
 
-  // TODO: Demonstrate salary calculation and payment processing for both
+  Manager manager = Manager("John Smith", "M001", "IT", 5);
+  Developer developer =
+      Developer("Alice Johnson", "D001", "IT", "Dart");
 
-  // TODO: Generate and print report for the Manager
+  manager.displayInfo();
+  print("Job Title: ${manager.getJobTitle()}");
+  print("Base Salary: ${manager.getBaseSalary()}");
 
-  // TODO: Display information for both employees
-}
+  double managerSalary =
+      manager.calculateSalary(manager.getBaseSalary(), 1000.0);
+
+  print("Calculated Salary: $managerSalary");
+  manager.processPayment(managerSalary);
+  print(manager.generateReport(manager.name, manager.department));
+
+  print("");
+
+  developer.displayInfo();
+  print("Job Title: ${developer.getJobTitle()}");
+  print("Base Salary: ${developer.getBaseSalary()}");
+
+  double developerSalary =
+      developer.calculateSalary(developer.getBaseSalary(), 500.0);
+
+  print("Calculated Salary: $developerSalary");
+  developer.processPayment(developerSalary);
+}  
+
+

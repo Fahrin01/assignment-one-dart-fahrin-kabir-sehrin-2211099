@@ -46,7 +46,7 @@ void main() {
   // TODO: Initialize your variables with appropriate values
 
   // TODO: Calculate BMI and grade
-  double bmi = calculateBMI(78.3, 1.86);
+  double bmi = calculateBMI(72.90, 1.80);
   String grade = getGrade(85);
 
   // TODO: Use string interpolation to display the results as shown in expected output
