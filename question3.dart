@@ -26,29 +26,32 @@ class BankAccount {
   //    - deposit(double amount): Add money to account
   // TODO: Implement the deposit method
   void deposit(double amount) {
-    // TODO: Add the amount to balance
+    balance += amount;
   }
 
   //    - withdraw(double amount): Remove money from account (check for sufficient funds)
   // TODO: Implement the withdraw method
   void withdraw(double amount) {
-    // TODO: Check for sufficient funds and subtract amount
-    // TODO: Print error message if insufficient funds
-    // Expected error format: "Insufficient funds for withdrawal of <amount> from account <accountNumber>"
+    if (balance >= amount) {
+      balance -= amount;
+    } else { 
+      print(
+        "Insufficient funds for withdrawal of $amount from account $accountNumber");
+    }  
   }
 
   //    - getBalance(): Return current balance
   // TODO: Implement the getBalance method
   double getBalance() {
-    // TODO: Return the current balance
-    return 0.0;
+    return balance;
   }
 
   //    - displayAccountInfo(): Show account details
   // TODO: Implement the displayAccountInfo method
   void displayAccountInfo() {
-    // TODO: Display account information
-    // Expected format: "Account: <number>, Holder: <name>, Type: <type>, Balance: <balance>"
+    print(
+      "Account: $accountNumber, Holder: $accountHolder, Type: $accountType, Balance: $balance");
+    
   }
 }
 
